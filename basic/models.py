@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+# Customer (id,fname,surname,phone no ,email,password)
+class Customer:
+    id=
+    fname=
+    surname=
+    phoneNo=
+    email=
+    password=
