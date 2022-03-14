@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +9,7 @@
         <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
@@ -16,40 +17,40 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="{% static 'lib/animate/animate.min.css" rel="stylesheet">
-        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="{% static 'lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
     </head>
 
     <body>
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Burger <span>King</span></a>
+                <a href="index" class="navbar-brand">Burger <span>King</span></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="feature.html" class="nav-item nav-link">Feature</a>
-                        <a href="team.html" class="nav-item nav-link">Chef</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="booking.html" class="nav-item nav-link active">Booking</a>
+                        <a href="index" class="nav-item nav-link">Home</a>
+                        <a href="about" class="nav-item nav-link">About</a>
+                        <a href="feature" class="nav-item nav-link">Feature</a>
+                        <a href="team" class="nav-item nav-link">Chef</a>
+                        <a href="menu" class="nav-item nav-link">Menu</a>
+                        <a href="booking" class="nav-item nav-link active">Booking</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                                <a href="blog" class="dropdown-item">Blog Grid</a>
+                                <a href="single" class="dropdown-item">Blog Detail</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -194,7 +195,7 @@
                                 <div class="col-lg-7 col-md-12">
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-burger' %}" alt="Image">
+                                            <img src="{% static 'img/menu-burger.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Mini cheese Burger</span> <strong>$9.00</strong></h3>
@@ -203,7 +204,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-burger' %}" alt="Image">
+                                            <img src="{% static 'img/menu-burger.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Double size burger</span> <strong>$11.00</strong></h3>
@@ -212,7 +213,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-burger' %}" alt="Image">
+                                            <img src="{% static 'img/menu-burger.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Bacon, EGG and Cheese</span> <strong>$13.00</strong></h3>
@@ -221,7 +222,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-burger' %}" alt="Image">
+                                            <img src="{% static 'img/menu-burger.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Pulled porx Burger</span> <strong>$18.00</strong></h3>
@@ -230,7 +231,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-burger' %}" alt="Image">
+                                            <img src="{% static 'img/menu-burger.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Fried chicken Burger</span> <strong>$22.00</strong></h3>
@@ -239,7 +240,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="{% static 'img/menu-burger-img' %}" alt="Image">
+                                    <img src="{% static 'img/menu-burger-img.jpg' %}" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -248,7 +249,7 @@
                                 <div class="col-lg-7 col-md-12">
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-snack' %}" alt="Image">
+                                            <img src="{% static 'img/menu-snack.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong></h3>
@@ -257,7 +258,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-snack' %}" alt="Image">
+                                            <img src="{% static 'img/menu-snack.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Bread besan Toast</span> <strong>$35.00</strong></h3>
@@ -266,7 +267,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-snack' %}" alt="Image">
+                                            <img src="{% static 'img/menu-snack.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Healthy soya nugget snacks</span> <strong>$20.00</strong></h3>
@@ -275,7 +276,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-snack' %}" alt="Image">
+                                            <img src="{% static 'img/menu-snack.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Tandoori Soya Chunks</span> <strong>$30.00</strong></h3>
@@ -284,7 +285,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="{% static 'img/menu-snack-img' %}" alt="Image">
+                                    <img src="{% static 'img/menu-snack-img.jpg' %}" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -293,7 +294,7 @@
                                 <div class="col-lg-7 col-md-12">
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-beverage' %}" alt="Image">
+                                            <img src="{% static 'img/menu-beverage.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Single Cup Brew</span> <strong>$7.00</strong></h3>
@@ -302,7 +303,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-beverage' %}" alt="Image">
+                                            <img src="{% static 'img/menu-beverage.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Caffe Americano</span> <strong>$9.00</strong></h3>
@@ -311,7 +312,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-beverage' %}" alt="Image">
+                                            <img src="{% static 'img/menu-beverage.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Caramel Macchiato</span> <strong>$15.00</strong></h3>
@@ -320,7 +321,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-beverage' %}" alt="Image">
+                                            <img src="{% static 'img/menu-beverage.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Standard black coffee</span> <strong>$8.00</strong></h3>
@@ -329,7 +330,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="{% static 'img/menu-beverage' %}" alt="Image">
+                                            <img src="{% static 'img/menu-beverage.jpg' %}" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Standard black coffee</span> <strong>$12.00</strong></h3>
@@ -338,7 +339,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="{% static 'img/menu-beverage-img' %}" alt="Image">
+                                    <img src="{% static 'img/menu-beverage-img.jpg' %}" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -410,17 +411,17 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="{% static '/lib/easing/easing.min.js"></script>
-        <script src="{% static '/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="{% static '/lib/tempusdominus/js/moment.min.js"></script>
-        <script src="{% static '/lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="{% static '/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+        <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+        <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
         
         <!-- Contact Javascript File -->
-        <script src="{% static '/mail/jqBootstrapValidation.min.js"></script>
-        <script src="{% static '/mail/contact.js"></script>
+        <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+        <script src="{% static 'mail/contact.js' %}"></script>
 
         <!-- Template Javascript -->
-        <script src="{% satic %}"/js/main.js"></script>
+        <script src="{% static 'js/main.js' %}"></script>
     </body>
 </html>

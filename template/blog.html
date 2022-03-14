@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +9,7 @@
         <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
@@ -16,40 +17,40 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="{% static 'lib/animate/animate.min.css" rel="stylesheet">
-        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="{% static 'lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
     </head>
 
     <body>
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Burger <span>King</span></a>
+                <a href="index" class="navbar-brand">Burger <span>King</span></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="feature.html" class="nav-item nav-link">Feature</a>
-                        <a href="team.html" class="nav-item nav-link">Chef</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="booking.html" class="nav-item nav-link">Booking</a>
+                        <a href="index" class="nav-item nav-link">Home</a>
+                        <a href="about" class="nav-item nav-link">About</a>
+                        <a href="feature" class="nav-item nav-link">Feature</a>
+                        <a href="team" class="nav-item nav-link">Chef</a>
+                        <a href="menu" class="nav-item nav-link">Menu</a>
+                        <a href="booking" class="nav-item nav-link">Booking</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                                <a href="blog" class="dropdown-item">Blog Grid</a>
+                                <a href="single" class="dropdown-item">Blog Detail</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +86,7 @@
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="{% static 'img/blog-1' %}" alt="Blog">
+                                <img src="{% static 'img/blog-1.jpg' %}" alt="Blog">
                             </div>
                             <div class="blog-content">
                                 <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
@@ -107,7 +108,7 @@
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="{% static 'img/blog-2' %}" alt="Blog">
+                                <img src="{% static 'img/blog-2.jpg' %}" alt="Blog">
                             </div>
                             <div class="blog-content">
                                 <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
@@ -129,7 +130,7 @@
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="{% static 'img/blog-3' %}" alt="Blog">
+                                <img src="{% static 'img/blog-3.jpg' %}" alt="Blog">
                             </div>
                             <div class="blog-content">
                                 <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
@@ -151,7 +152,7 @@
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="{% static 'img/blog-4' %}" alt="Blog">
+                                <img src="{% static 'img/blog-4.jpg' %}" alt="Blog">
                             </div>
                             <div class="blog-content">
                                 <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
@@ -248,17 +249,17 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="{% static '/lib/easing/easing.min.js"></script>
-        <script src="{% static '/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="{% static '/lib/tempusdominus/js/moment.min.js"></script>
-        <script src="{% static '/lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="{% static '/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+        <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+        <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
         
         <!-- Contact Javascript File -->
-        <script src="{% static '/mail/jqBootstrapValidation.min.js"></script>
-        <script src="{% static '/mail/contact.js"></script>
+        <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+        <script src="{% static 'mail/contact.js' %}"></script>
 
         <!-- Template Javascript -->
-        <script src="{% satic %}"/js/main.js"></script>
+        <script src="{% static 'js/main.js' %}"></script>
     </body>
 </html>
