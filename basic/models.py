@@ -51,7 +51,7 @@ class foodItems(models.Model):
     price=models.IntegerField() 
     customization=MultiSelectField(choices=CustomizationChoice,blank=False)
     description=models.CharField(max_length=30)
-    image=models.ImageField(upload_to='uploadedImages')
+    image=models.FileField(upload_to='uploadedImages')
 
 class foodForm(forms.ModelForm):
     class Meta:

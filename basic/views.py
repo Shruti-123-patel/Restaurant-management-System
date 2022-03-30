@@ -1,8 +1,10 @@
+from hashlib import new
 from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http.response import HttpResponse
-from RestaurantManagementSystem.basic.models import customer
+from basic.models import foodItems
+from basic.models import customer
 from basic.models import registration
 from basic.forms import login
 
@@ -43,21 +45,27 @@ def team(request):
 
 def addFood(request):
     context={}
-    form=foodForm
-    context['form']=form
-    print("ha")
-    return render(request,"Form.html",context)
-
-def addFoodDB(request):
-    form=foodForm(request.POST)
-    
-    print(form)
-    if form.is_valid():
+    form_=foodForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST':
+         new.image = request.FILES.get('image')
+    if form_.is_valid():
         print("na")
-        form.save()
+        form_.save()
     else:
         print("na!!")
-    return render(request,"Form.html")
+    context['form']=form_
+    return render(request,"Form.html",context)
+
+# def addFoodDB(request):
+#     form=foodForm(request.POST)
+    
+#     print(form)
+#     if form.is_valid():
+#         print("na")
+#         form.save()
+#     else:
+#         print("na!!")
+#     return render(request,"Form.html")
 
 def register(request):
     context={}
@@ -76,7 +84,7 @@ def login_(request):
     if request.method=='POST':
         form_=login(request.POST)
         if form_.is_valid():
-           cust=customer.objects.get(pk=request.POST['email'])
+           cust=customer.objects.get(pk=request.POST['phoneNo'])
            if cust.password==request.POST['password']:
                return render(request,"index.html",context)
            else:
@@ -87,3 +95,9 @@ def login_(request):
         context['form']=form_
         print("ha")
         return render(request,"Form.html",context)
+
+def order_(request):
+    foodItem=foodItems.objects.all()
+    context={}
+    context["food"]=foodItem
+    return render(request,"OrderPage.html",context)
