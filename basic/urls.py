@@ -15,6 +15,6 @@ urlpatterns = [
     path('team',views.team,name='team'),
     path('addFood',views.addFood,name='addFood'),
     path('addFoodDB',views.addFoodDB,name='addFoodDB'),
-    path('registration',views.register,name='register'),
+    path('register',views.register,name='register'),
     path('login',views.login_,name='login')
 ]
