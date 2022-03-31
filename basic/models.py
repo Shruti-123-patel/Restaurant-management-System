@@ -6,6 +6,7 @@ from django.forms import ModelForm,widgets
 from multiselectfield import MultiSelectField
 
 class customer(models.Model):
+    uname=models.CharField(max_length=100,default="fake+")
     fname=models.CharField(max_length=100)
     lname=models.CharField(max_length=100)
     password=models.CharField(max_length=10) 
@@ -46,18 +47,21 @@ class foodItems(models.Model):
         ('Veg','Veg'),
         ('Non-veg','Non-veg'),
     )
+    ide = models.BigAutoField(primary_key=True)
     name=models.CharField(max_length=50) 
     type=models.CharField(max_length=20,choices=typeChoice,blank=False,default='Veg') 
     price=models.IntegerField() 
     customization=MultiSelectField(choices=CustomizationChoice,blank=False)
     description=models.CharField(max_length=30)
     image=models.FileField(upload_to='uploadedImages')
+    category=models.IntegerField(default=1)
 
 class foodForm(forms.ModelForm):
     class Meta:
         model = foodItems
         fields = "__all__"
         widget={
+            'category' : forms.TextInput(attrs={'class':'form-control'}),
             'name' : forms.TextInput(attrs={'class':'form-control'}),
             'price': forms.TextInput(attrs={'class':'form-control'}),
             'customization': forms.CheckboxSelectMultiple,

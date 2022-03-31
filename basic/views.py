@@ -1,5 +1,6 @@
 from hashlib import new
 from http.client import HTTPResponse
+from pickle import FALSE
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http.response import HttpResponse
@@ -7,8 +8,8 @@ from basic.models import foodItems
 from basic.models import customer
 from basic.models import registration
 from basic.forms import login
-
 from basic.models import foodForm
+from RestaurantManagementSystem import settings
 
 
 # Create your views here.
@@ -86,6 +87,9 @@ def login_(request):
         if form_.is_valid():
            cust=customer.objects.get(pk=request.POST['phoneNo'])
            if cust.password==request.POST['password']:
+               request.session['name'] =cust.uname
+               cart={1:"None"}
+               request.session['cart'] = cart
                return render(request,"index.html",context)
            else:
                return render(request,"Form.html",context)
@@ -101,3 +105,28 @@ def order_(request):
     context={}
     context["food"]=foodItem
     return render(request,"OrderPage.html",context)
+
+def menu(request):
+    dests = foodItems.objects.all()
+    flag=[False,False,False]
+    for d in dests:
+        flag[d.ide]=False
+
+    # print(flag[d.ide])
+    request.session['flag']=flag
+    return render(request,'menu.html',{'dests':dests,'media_url':settings.MEDIA_URL,'flags':flag})
+
+def cart(request):
+    id=request.GET['id']
+    print("hello")
+    flag=request.session['flag']
+    flag[id]=True
+    request.session['flag']=flag
+    print(flag) 
+    cart_=request.session.get('cart')
+    print(cart_)
+    cart_[str(id)]=1
+    request.session['cart']=cart_
+    dests = foodItems.objects.all()
+    return render(request,'menu.html',{'dests':dests,'media_url':settings.MEDIA_URL,'flags':flag})
+    

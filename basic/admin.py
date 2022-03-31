@@ -5,9 +5,7 @@ from basic.models import orders
 from basic.models import feedback
 from basic.models import worker
 from basic.models import customer
-
 from basic.models import foodItems
-
 
 admin.site.register(foodItems)
 admin.site.register(customer)

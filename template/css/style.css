@@ -689,6 +689,11 @@ a:focus {
     animation: pulse-border 1500ms ease-out infinite;
 }
 
+.addCart{
+    background: #fbaf32;
+    border-radius: 10%;
+}
+
 .about .btn-play:after {
     content: "";
     position: absolute;
