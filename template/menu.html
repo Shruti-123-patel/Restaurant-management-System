@@ -39,7 +39,7 @@
     <!-- Nav Bar Start -->
     <div class="navbar navbar-expand-lg bg-light navbar-light">
         <div class="container-fluid">
-            <a href="index" class="navbar-brand">Burger <span>King</span></a>
+            <a href="index" class="navbar-brand">Patel <span>Restaurant</span></a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,13 +47,14 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
                     <a href="index" class="nav-item nav-link active">Home</a>
-                    <a href="about" class="nav-item nav-link">About</a>
                     <!-- <a href="feature" class="nav-item nav-link">Feature</a> -->
                     <a href="menu" class="nav-item nav-link">Menu</a>
                     <a href="booking" class="nav-item nav-link">Booking</a>
-                    <a href="contact" class="nav-item nav-link">Contact</a>
-                    <a href="login" class="nav-item nav-link">Login</a>
-                    <a href="cartView" class="nav-item nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href={{link}} class="nav-item nav-link">{{name}}</a>
+                    <a href="cartView" class="nav-item nav-link"><img src="{% static 'img/cart-fill.svg' %}"
+                            class="cart" style="height:20px;color:rgb(175, 169, 169)"></a>
+                    <a href="login" class="nav-item nav-link"><img src="{% static 'img/logout.svg' %}"
+                                class="cart" style="height:20px;color:rgb(175, 169, 169)"> </a>
                 </div>
             </div>
         </div>
@@ -148,11 +149,7 @@
                                 {% if dest.category == 1 %}
                                 <div class="menu-item">
                                     <div class="menu-img">
-                                        {% if dest.image %}
-                                        <img src={{media_url}}{{dest.image}} alt="Image">
-                                        {% else %}
-                                        <img src="{% static 'img/menu-burger-img.jpg' %}" alt="Image">
-                                        {% endif %}
+                                        <img src="{{dest.image.url}}" alt="Image">
                                     </div>
                                     <div class="menu-text">
                                         <h3><span>{{dest.name}}</span> <strong>${{dest.price}}</strong></h3>
@@ -161,11 +158,8 @@
 
                                     <a href='addCart?id={{dest.ide}}'> <button class="addCart"
                                         style=" background: #fbaf32;border-radius: 5px; color:white;width:150px;margin-left:10px;margin-top:-10px">
-                                        {% if flag[d.ide] %}
-                                                Added
-                                        {% else %}
+                                       
                                         Add To Cart
-                                        {% endif %}
                                       </button> </a>
 
                                 </div>
@@ -267,7 +261,7 @@
                         <div class="col-md-6">
                             <div class="footer-contact">
                                 <h2>Our Address</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                <p><i class="fa fa-map-marker-alt"></i>234 Patel Street, New York, USA</p>
                                 <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
                                 <p><i class="fa fa-envelope"></i>info@example.com</p>
                                 <div class="footer-social">
@@ -295,8 +289,7 @@
                     <div class="footer-newsletter">
                         <h2>Newsletter</h2>
                         <p>
-                            Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu
-                            placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                           Our Restaurant is city's best restaurant (award winning) in terms of cleanliness and taste.
                         </p>
                         <div class="form">
                             <input class="form-control" placeholder="Email goes here">
@@ -309,7 +302,7 @@
         <div class="copyright">
             <div class="container">
                 <p>Copyright &copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
-                <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                <p>Designed By <a href="https://htmlcodex.com">Patel Restaurant</a></p>
             </div>
         </div>
     </div>

@@ -29,7 +29,7 @@
 <body>
     <div class="navbar navbar-expand-lg bg-light navbar-light">
         <div class="container-fluid">
-            <a href="index" class="navbar-brand">Burger <span>King</span></a>
+            <a href="index" class="navbar-brand">Patel <span>Restaurant</span></a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,12 +37,14 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
                     <a href="index" class="nav-item nav-link active">Home</a>
-                    <a href="about" class="nav-item nav-link">About</a>
-                    <a href="feature" class="nav-item nav-link">Feature</a>
-                    <a href="team" class="nav-item nav-link">Chef</a>
+                    <!-- <a href="feature" class="nav-item nav-link">Feature</a> -->
                     <a href="menu" class="nav-item nav-link">Menu</a>
                     <a href="booking" class="nav-item nav-link">Booking</a>
-                    <a href="contact" class="nav-item nav-link">Contact</a>
+                    <a href={{link}} class="nav-item nav-link">{{name}}</a>
+                    <a href="cartView" class="nav-item nav-link"><img src="{% static 'img/cart-fill.svg' %}"
+                            class="cart" style="height:20px;color:rgb(175, 169, 169)"></a>
+                    <a href="login" class="nav-item nav-link"><img src="{% static 'img/logout.svg' %}"
+                                class="cart" style="height:20px;color:rgb(175, 169, 169)"> </a>
                 </div>
             </div>
         </div>

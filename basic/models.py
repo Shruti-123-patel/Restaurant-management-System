@@ -98,11 +98,11 @@ class orderood(models.Model):
         ('extra chilly spicy','extra chilly spicy')
     )
     oid=models.ForeignKey(orders, on_delete=models.CASCADE)
-    foodid=models.ForeignKey(customer, on_delete=models.CASCADE)
+    foodid=models.ForeignKey(foodItems, on_delete=models.CASCADE)
     quantity=models.IntegerField() 
     pricePerItem=models.IntegerField() 
-    custmizations=models.CharField(max_length=60,choices=CustomizationChoice)
     totalPrice=models.IntegerField() 
+    name=models.CharField(max_length=20,default="xyz")
 
 class table(models.Model):
     noOfTables = models.IntegerField()
@@ -122,3 +122,11 @@ class mannualOrder(models.Model):
     foodid = models.ForeignKey(foodItems, on_delete=models.CASCADE)
     quantity = models.IntegerField()
 
+class tableReservation(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    mobile = models.IntegerField()
+    date = models.DateField()
+    time = models.TimeField()
+    no_of_tabels = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
